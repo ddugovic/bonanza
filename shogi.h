@@ -1197,10 +1197,10 @@ const char *str_CSA_move_plus( tree_t * restrict ptree, unsigned int move,
 			       int ply, int turn );
 
 #if defined(MPV)
-int root_mpv;
-int mpv_num;
-int mpv_width;
-pv_t mpv_pv[ MPV_MAX_PV*2 + 1 ];
+extern int root_mpv;
+extern int mpv_num;
+extern int mpv_width;
+extern pv_t mpv_pv[ MPV_MAX_PV*2 + 1 ];
 #endif
 
 #if defined(TLP)
@@ -1317,8 +1317,8 @@ extern short mnj_tbl[ MNJ_MASK + 1 ];
 extern sckt_t sckt_mnj;
 int mnj_reset_tbl( int sd, unsigned int seed );
 int analyze( tree_t * restrict ptree );
-int mnj_posi_id;
-unsigned int mnj_move_last;
+extern int mnj_posi_id;
+extern unsigned int mnj_move_last;
 #else
 #  define MnjOut( ... )
 #endif
